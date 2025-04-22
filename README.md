@@ -1,9 +1,4 @@
 # Final Project
 
-50 words here
+ç
 
-
-
-Keywords
-
-Long description

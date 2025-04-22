@@ -2,14 +2,117 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Website Template</title>
+	<title>canyoufindmydog</title>
 	<link rel="stylesheet" href="./assets/css/styles.css">
+
+<style>
+	body {
+		background-color: antiquewhite;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		overflow: hidden;
+	}
+	.container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+	grid-template-columns: 1fr 1fr;
+ 	column-gap: 5px;
+  }
+  
+  .text {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 5%;
+    float: right;
+	margin-left: 100px;
+	
+
+
+  }
+
+  img {
+    max-width: 80%;
+    max-height:80%;
+    float: right;
+	margin-right: 100px;
+  }
+  .image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, 0%); 
+  color: #000000; 
+  padding: 0px 0px; 
+  font-size: 30px; 
+  text-align: justify;
+}
+.overlay-img {
+	position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-43%, -85%); 
+  padding: 10px 20px; 
+align-content: center;
+width: 600px;
+height: 600px;
+
+}
+.description {
+	color: rgb(0, 0, 0);	
+}
+.description g {
+	color: #8b8b8b;
+}
+.description r {
+	color: red;
+}
+	
+</style>
 </head>
+
 <body>
 
-	<h1>Website Template</h1>
-	<p>Fork and use this template repo (a.k.a. "boilerplate") for any web project</p>
-	<img src="assets/img/cat.jpg" alt="" style="max-width: 32rem;">
+
+	
+	<div class="container">
+		<div class="text">
+			<h1>Can You Help Find Our 
+				Dog?</h1>
+		  </div>
+		  <div class="image-container">
+			<div class="image">
+			<img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Scrolls-PNG/Old_Scrolled_Paper_PNG_Image.png?m=1629815168" alt="image">
+			
+			<div class="overlay-text">
+				<div class="description">
+				Lorem ipsum dolor sit amet, consectetur <g> elit.</g>
+				Sed do eiusmod tempor incididunt ut <r>labore</r> et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+				Excepteur sint occaecat cupidatat non proident.
+			</div>
+		</div>
+			<div class="overlay-img">
+				<img src="assets/img/normaldog.jpg" alt="image1"
+			</div>
+		</div>
+	  </div>
+
+
+
 
 	<script src="./assets/js/main.js"></script>
 </body>
