@@ -1,11 +1,9 @@
-# Website Template
+# Final Project
 
-Fork and use this template repo (a.k.a. "boilerplate") for any web project
+50 words here
 
 
 
-Option 1: Use Template
-Click Use this template > Create a new repository
+Keywords
 
-Option 2: Open in new Codespace
-https://codespaces.new/criticalwebdesign/website-template 
+Long description
