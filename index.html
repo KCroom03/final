@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+
 	<meta charset="utf-8">
 	<title>canyoufindmydog</title>
 	<link rel="stylesheet" href="./assets/css/styles.css">
@@ -22,14 +36,12 @@
   }
   
   .text {
-    font-size: 30px;
+    font-size: 60px;
     padding-left: 10px;
-    padding-top: 5%;
+    padding-top: 0%;
     float: right;
 	margin-left: 100px;
-	
-
-
+	font-family: "Special Elite", system-ui;
   }
 
   img {
@@ -59,6 +71,31 @@
   font-size: 30px; 
   text-align: justify;
 }
+
+.overlay-text2 {
+  position: absolute;
+  top: 12%; 
+  left: 50%; 
+  transform: translate(-50%, -100%); 
+  color: #000000; 
+  padding: 0px 0px; 
+  font-size: 50px; 
+  text-align: justify;
+  font-family: "Bowlby One SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.overlay-text3 {
+  position: absolute;
+  top: 15%; 
+  left: 50%; 
+  transform: translate(-50%, 260%); 
+  color: #000000; 
+  padding: 0px 0px; 
+  font-size: 50px; 
+  text-align: center;
+}
+
 .overlay-img {
 	position: absolute;
   top: 50%; 
@@ -72,12 +109,21 @@ height: 600px;
 }
 .description {
 	color: rgb(0, 0, 0);	
+	font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 .description g {
 	color: #8b8b8b;
+	font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 .description r {
 	color: red;
+	font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 	
 </style>
@@ -85,25 +131,34 @@ height: 600px;
 
 <body>
 
-
-	
 	<div class="container">
 		<div class="text">
-			<h1>Can You Help Find Our 
-				Dog?</h1>
+			Can You Help Find Our 
+				Dog?
 		  </div>
 		  <div class="image-container">
 			<div class="image">
 			<img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Scrolls-PNG/Old_Scrolled_Paper_PNG_Image.png?m=1629815168" alt="image">
 			
+				<div class="overlay-text2">
+					LOST DOG!!
+				</div>
+				
+
+
 			<div class="overlay-text">
 				<div class="description">
-				Lorem ipsum dolor sit amet, consectetur <g> elit.</g>
-				Sed do eiusmod tempor incididunt ut <r>labore</r> et dolore magna aliqua. 
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-				Excepteur sint occaecat cupidatat non proident.
+				Our dog's name is <g>[REDACTED]</g>
+				He loves to <r>dance</r> and is very sweet. 
+				He turns blue when he is cold, don't ask why he's very normal.
+				He is a German Shepherd, we got him tested trust us. He also totally doesn't bite. 
+				Please return him back to us we miss our sweet very normal boy.
 			</div>
+
+			<div class="overlay-text3">
+				1,000$ REWARD
+			</div>
+
 		</div>
 			<div class="overlay-img">
 				<img src="assets/img/normaldog.jpg" alt="image1"
