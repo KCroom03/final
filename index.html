@@ -22,10 +22,12 @@
 <style>
 	body {
 		background-color: antiquewhite;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		overflow: hidden;
+		background-position: right bottom;
+    background-attachment: fixed;
+    background-position: 1150px, 0px;
+		background-size: 40%;
+    background-repeat: no-repeat;
+		background-image: url("assets/img/paper.png");
 	}
 	.container {
     display: grid;
@@ -38,8 +40,8 @@
   .text {
     font-size: 60px;
     padding-left: 10px;
-    padding-top: 0%;
-    float: right;
+    padding-top: 50%;
+    float: left;
 	margin-left: 100px;
 	font-family: "Special Elite", system-ui;
   }
@@ -48,35 +50,16 @@
     max-width: 80%;
     max-height:80%;
     float: right;
-	margin-right: 100px;
+	margin-right: -445px;
+	background: "assets/img/paper.png"
+
   }
-  .image-container {
-  position: relative;
-  display: inline-block;
-}
 
-.image-container img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.overlay-text {
-  position: absolute;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, 0%); 
-  color: #000000; 
-  padding: 0px 0px; 
-  font-size: 30px; 
-  text-align: justify;
-}
-
-.overlay-text2 {
+.lostdogtext {
   position: absolute;
   top: 12%; 
   left: 50%; 
-  transform: translate(-50%, -100%); 
+  transform: translate(126%, -100%); 
   color: #000000; 
   padding: 0px 0px; 
   font-size: 50px; 
@@ -85,18 +68,19 @@
   font-weight: 400;
   font-style: normal;
 }
-.overlay-text3 {
+.rewardtext {
   position: absolute;
   top: 15%; 
   left: 50%; 
-  transform: translate(-50%, 260%); 
-  color: #000000; 
+  transform: translate(350px, 730px); 
+  color: #ffff00; 
+  -webkit-text-stroke: #b80000 2px;
   padding: 0px 0px; 
   font-size: 50px; 
   text-align: center;
 }
 
-.overlay-img {
+.dogimg {
 	position: absolute;
   top: 50%; 
   left: 50%; 
@@ -111,6 +95,17 @@ height: 600px;
 	font-family: "Lacquer", system-ui;
   font-weight: 400;
   font-style: normal;
+  position: absolute;
+  top: 50%; 
+  left: 40%; 
+  transform: translate(420px, -90px); 
+  color: #000000; 
+  font-size: 30px; 
+  text-align: center;
+  border-radius: 50px;
+  padding: 80px;
+  inline-size: 500px;
+  overflow-wrap: break-word;
 }
 .description g {
 	color: #8b8b8b;
@@ -118,13 +113,30 @@ height: 600px;
   font-weight: 400;
   font-style: normal;
 }
-.description r {
-	color: red;
+.description h {
+	color: rgb(0, 172, 83);
 	font-family: "Lacquer", system-ui;
   font-weight: 400;
   font-style: normal;
 }
-	
+.description b {
+	color: rgb(0, 136, 255);
+	font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.description o {
+	color: rgb(255, 132, 0);
+	font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.description r {
+	color: rgb(255, 0, 0);
+	font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 </style>
 </head>
 
@@ -135,31 +147,29 @@ height: 600px;
 			Can You Help Find Our 
 				Dog?
 		  </div>
-		  <div class="image-container">
-			<div class="image">
-			<img src= "img/paper.png" alt="image">
+		
 			
-				<div class="overlay-text2">
+				<div class="lostdogtext">
 					LOST DOG!!
 				</div>
 				
 
 
-			<div class="overlay-text">
+			
 				<div class="description">
-				Our dog's name is <g>[REDACTED]</g>
-				He loves to <r>dance</r> and is very sweet. 
-				He turns blue when he is cold, don't ask why he's very normal.
-				He is a German Shepherd, we got him tested trust us. He also totally doesn't bite. 
+				Our dog's name is <g>[REDACTED].</g>
+				He loves to <h>dance</h> and is very sweet. 
+				He turns blue when he is <b>cold</b>, don't ask why he's very normal.
+				He is a <o>German Shepherd</o>, we got him tested trust us. He also totally doesn't <r>bite.</r> 
 				Please return him back to us we miss our sweet very normal boy.
 			</div>
 
-			<div class="overlay-text3">
+			<div class="rewardtext">
 				1,000$ REWARD
 			</div>
 
 		</div>
-			<div class="overlay-img">
+			<div class="dogimg">
 				<img src="assets/img/normaldog.jpg" alt="image1"
 			</div>
 		</div>
@@ -168,17 +178,17 @@ height: 600px;
 
 <script>
 	document.addEventListener("DOMContentLoaded", () => {
-    const danceElement = document.querySelector(".description r");
-    const imageElement = document.querySelector(".overlay-img img");
-  
-    danceElement.addEventListener("mouseover", () => {
-      imageElement.src = "assets/img/cat.jpg";
-    });
-  
-    danceElement.addEventListener("mouseout", () => {
-      imageElement.src = "assets/img/normaldog.jpg";
-    });
+  const danceElement = document.querySelector(".description h");
+  const imageElement = document.querySelector(".dogimg img");
+
+  danceElement.addEventListener("mouseover", () => {
+    imageElement.src = "assets/img/cat.jpg";
   });
+
+  danceElement.addEventListener("mouseout", () => {
+    imageElement.src = "assets/img/normaldog.jpg";
+  });
+});
 </script>
 </body>
 </html>
