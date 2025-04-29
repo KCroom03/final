@@ -42,7 +42,7 @@
     padding-left: 10px;
     padding-top: 50%;
     float: left;
-	margin-left: 100px;
+	margin-left: 140px;
 	font-family: "Special Elite", system-ui;
   }
 
@@ -158,8 +158,8 @@ height: 600px;
 				Our dog's name is <g>[REDACTED].</g>
 				He loves to <h>dance</h> and is very sweet. 
 				He turns blue when he is <b>cold</b>, don't ask why he's very normal.
-				He is a <o>German Shepherd</o>, we got him tested trust us. He also totally doesn't <r>bite.</r> 
-				Please return him back to us we miss our sweet very normal boy.
+				He is a <o>German Shepherd</o>... we got him tested trust us. He also totally doesn't <r>bite.</r> 
+				Please return him back to us we miss our sweet very NORMAL boy.
 			</div>
 
 			<div class="rewardtext">
@@ -175,6 +175,32 @@ height: 600px;
 
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const redactedElement = document.querySelector(".description g");
+  const imageElement = document.querySelector(".dogimg img");
+
+  redactedElement.addEventListener("mouseover", () => {
+    imageElement.src = "assets/img/evilboy.jpg";
+  });
+
+  redactedElement.addEventListener("mouseout", () => {
+    imageElement.src = "assets/img/normaldog.jpg";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const redactedElement = document.querySelector(".description g");
+  const bodyElement = document.body;
+
+  redactedElement.addEventListener("mouseover", () => {
+    bodyElement.style.backgroundColor = "black";
+  });
+
+  redactedElement.addEventListener("mouseout", () => {
+    bodyElement.style.backgroundColor = "antiquewhite"; // Revert to the original background color
+  });
+});
+
 	document.addEventListener("DOMContentLoaded", () => {
   const danceElement = document.querySelector(".description h");
   const imageElement = document.querySelector(".dogimg img");
@@ -220,6 +246,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   biteElement.addEventListener("mouseout", () => {
+    imageElement.src = "assets/img/normaldog.jpg";
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const rewardElement = document.querySelector(".rewardtext");
+  const imageElement = document.querySelector(".dogimg img");
+
+  rewardElement.addEventListener("mouseover", () => {
+    imageElement.src = "assets/img/moneydog.jpg";
+  });
+
+  rewardElement.addEventListener("mouseout", () => {
     imageElement.src = "assets/img/normaldog.jpg";
   });
 });
