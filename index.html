@@ -189,6 +189,42 @@ height: 600px;
     imageElement.src = "assets/img/normaldog.jpg";
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const coldElement = document.querySelector(".description b");
+  const imageElement = document.querySelector(".dogimg img");
+
+  coldElement.addEventListener("mouseover", () => {
+    imageElement.src = "assets/img/colddog.jpg";
+  });
+
+  coldElement.addEventListener("mouseout", () => {
+    imageElement.src = "assets/img/normaldog.jpg";
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const germanShepherdElement = document.querySelector(".description o");
+  const imageElement = document.querySelector(".dogimg img");
+
+  germanShepherdElement.addEventListener("mouseover", () => {
+    imageElement.src = "assets/img/germanshep.jpg";
+  });
+
+  germanShepherdElement.addEventListener("mouseout", () => {
+    imageElement.src = "assets/img/normaldog.jpg";
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const biteElement = document.querySelector(".description r");
+  const imageElement = document.querySelector(".dogimg img");
+
+  biteElement.addEventListener("mouseover", () => {
+    imageElement.src = "assets/img/bitedog.jpg";
+  });
+
+  biteElement.addEventListener("mouseout", () => {
+    imageElement.src = "assets/img/normaldog.jpg";
+  });
+});
 </script>
 </body>
 </html>
