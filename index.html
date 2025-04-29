@@ -25,16 +25,17 @@
 		background-position: right bottom;
     background-attachment: fixed;
     background-position: 1150px, 0px;
-		background-size: 40%;
+		background-size: 800px;
     background-repeat: no-repeat;
 		background-image: url("assets/img/paper.png");
+    
 	}
 	.container {
     display: grid;
     align-items: center;
     justify-content: center;
 	grid-template-columns: 1fr 1fr;
- 	column-gap: 5px;
+ 	column-gap: 1px;
   }
   
   .text {
@@ -51,7 +52,7 @@
     max-height:80%;
     float: right;
 	margin-right: -445px;
-	background: "assets/img/paper.png"
+
 
   }
 
@@ -168,7 +169,7 @@ height: 600px;
 
 		</div>
 			<div class="dogimg">
-				<img src="assets/img/normaldog.jpg" alt="image1"
+				<img src="assets/img/normaldog.jpg" alt="image1">
 			</div>
 		</div>
 	  </div>
@@ -187,6 +188,23 @@ document.addEventListener("DOMContentLoaded", () => {
     imageElement.src = "assets/img/normaldog.jpg";
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const redactedElement = document.querySelector(".description g");
+  const audio = new Audio("assets/static.mp3");
+  audio.volume = 0.2;
+
+  redactedElement.addEventListener("mouseover", () => {
+    audio.play();
+  });
+
+  redactedElement.addEventListener("mouseout", () => {
+    audio.pause();
+    audio.currentTime = 0; // Reset audio to the beginning
+  });
+});
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const redactedElement = document.querySelector(".description g");
