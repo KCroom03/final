@@ -153,11 +153,11 @@
 
 				<div class="description">
           Our dog's name is <span class="name">[REDACTED].</span>
-          He loves to <span class="dance">dance</span> and is very sweet. 
+          He loves to <span class="dance">dance</span> and is very sweet.
           He turns blue when he is <span class="cold">cold</span>, don't ask why he's very normal.
           He is a <span class="breed">German Shepherd</span>... we got him tested trust us.
           He also totally doesn't <span class="bite">bite.</span> 
-          Please return him back to us we miss our sweet very NORMAL boy.
+          Please return him back to us we miss our SWEET very NORMAL boy.
         </div>
 
 			<div class="rewardtext">
@@ -168,6 +168,7 @@
 			<div class="dogimg">
 				<img src="assets/img/normaldog.jpg" alt="image1">
 			</div>
+    </div>
 
 
 <script>
@@ -189,8 +190,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const audio = new Audio("assets/static.mp3");
   audio.volume = 0.01;
 
+  // Enable audio playback on user interaction
+  document.body.addEventListener("click", () => {
+    audio.play().then(() => {
+      audio.pause();
+      audio.currentTime = 0; // Reset audio to the beginning
+    }).catch((error) => {
+      console.error("Audio playback failed:", error);
+    });
+  }, { once: true }); // Ensure this runs only once
+
   redactedElement.addEventListener("mouseover", () => {
-    audio.play();
+    audio.play().catch((error) => {
+      console.error("Audio playback failed:", error);
+    });
   });
 
   redactedElement.addEventListener("mouseout", () => {
@@ -219,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const imageElement = document.querySelector(".dogimg img"); // Select the dog image
 
   danceElement.addEventListener("mouseover", () => {
-    imageElement.src = "assets/img/cat.jpg"; // Switch to cat.jpg on hover
+    imageElement.src = "assets/img/dance.jpg"; // Switch to cat.jpg on hover
   });
 
   danceElement.addEventListener("mouseout", () => {
@@ -230,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const coldElement = document.querySelector("..description .cold");
+  const coldElement = document.querySelector(".description .cold");
   const imageElement = document.querySelector(".dogimg img");
 
   coldElement.addEventListener("mouseover", () => {
