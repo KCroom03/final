@@ -82,9 +82,9 @@
   left: 50%; 
   transform: translate(-43%, -85%); 
   padding: 10px 20px; 
-align-content: center;
-width: 600px;
-height: 600px;
+  align-content: center;
+  width: 600px;
+  height: 600px;
 }
 
 
@@ -111,7 +111,7 @@ height: 600px;
   font-weight: 400;
   font-style: normal;
 }
-.description h {
+.dance {
 	color: rgb(0, 172, 83);
 	font-family: "Lacquer", system-ui;
   font-weight: 400;
@@ -152,12 +152,12 @@ height: 600px;
 				
 
 				<div class="description">
-				Our dog's name is <g>[REDACTED].</g>
-				He loves to <h>dance</h> and is very sweet. 
-				He turns blue when he is <b>cold</b>, don't ask why he's very normal.
-				He is a <o>German Shepherd</o>... we got him tested trust us. He also totally doesn't <r>bite.</r> 
-				Please return him back to us we miss our sweet very NORMAL boy.
-			</div>
+          Our dog's name is <g>[REDACTED].</g>
+          He loves to <span class="dance">dance</span> and is very sweet. 
+          He turns blue when he is <b>cold</b>, don't ask why he's very normal.
+          He is a <o>German Shepherd</o>... we got him tested trust us. He also totally doesn't <r>bite.</r> 
+          Please return him back to us we miss our sweet very NORMAL boy.
+        </div>
 
 			<div class="rewardtext">
 				1,000$ REWARD
@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const danceElement = document.querySelector(".description h"); // Select the "dance" element
+  const danceElement = document.querySelector(".description .dance"); // Select the "dance" element
   const imageElement = document.querySelector(".dogimg img"); // Select the dog image
 
   danceElement.addEventListener("mouseover", () => {
@@ -276,6 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
     imageElement.src = "assets/img/normaldog.jpg";
   });
 });
+
 </script>
 </body>
 </html>
