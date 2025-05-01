@@ -105,7 +105,7 @@
   overflow-wrap: break-word;
 }
 
-.description g {
+.name {
 	color: #8b8b8b;
 	font-family: "Lacquer", system-ui;
   font-weight: 400;
@@ -117,19 +117,19 @@
   font-weight: 400;
   font-style: normal;
 }
-.description b {
+.cold {
 	color: rgb(0, 136, 255);
 	font-family: "Lacquer", system-ui;
   font-weight: 400;
   font-style: normal;
 }
-.description o {
+.breed {
 	color: rgb(255, 132, 0);
 	font-family: "Lacquer", system-ui;
   font-weight: 400;
   font-style: normal;
 }
-.description r {
+.bite {
 	color: rgb(255, 0, 0);
 	font-family: "Lacquer", system-ui;
   font-weight: 400;
@@ -152,10 +152,11 @@
 				
 
 				<div class="description">
-          Our dog's name is <g>[REDACTED].</g>
+          Our dog's name is <span class="name">[REDACTED].</span>
           He loves to <span class="dance">dance</span> and is very sweet. 
-          He turns blue when he is <b>cold</b>, don't ask why he's very normal.
-          He is a <o>German Shepherd</o>... we got him tested trust us. He also totally doesn't <r>bite.</r> 
+          He turns blue when he is <span class="cold">cold</span>, don't ask why he's very normal.
+          He is a <span class="breed">German Shepherd</span>... we got him tested trust us.
+          He also totally doesn't <span class="bite">bite.</span> 
           Please return him back to us we miss our sweet very NORMAL boy.
         </div>
 
@@ -171,7 +172,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const redactedElement = document.querySelector(".description g");
+  const redactedElement = document.querySelector(".description .name");
   const imageElement = document.querySelector(".dogimg img");
 
   redactedElement.addEventListener("mouseover", () => {
@@ -184,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const redactedElement = document.querySelector(".description g");
+  const redactedElement = document.querySelector(".description .name");
   const audio = new Audio("assets/static.mp3");
   audio.volume = 0.01;
 
@@ -201,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const redactedElement = document.querySelector(".description g");
+  const redactedElement = document.querySelector(".description .name");
   const bodyElement = document.body;
 
   redactedElement.addEventListener("mouseover", () => {
@@ -229,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const coldElement = document.querySelector(".description b");
+  const coldElement = document.querySelector("..description .cold");
   const imageElement = document.querySelector(".dogimg img");
 
   coldElement.addEventListener("mouseover", () => {
@@ -241,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
-  const germanShepherdElement = document.querySelector(".description o");
+  const germanShepherdElement = document.querySelector(".description .breed");
   const imageElement = document.querySelector(".dogimg img");
 
   germanShepherdElement.addEventListener("mouseover", () => {
@@ -253,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
-  const biteElement = document.querySelector(".description r");
+  const biteElement = document.querySelector(".description .bite");
   const imageElement = document.querySelector(".dogimg img");
 
   biteElement.addEventListener("mouseover", () => {
