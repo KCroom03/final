@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const redactedElement = document.querySelector(".description g");
   const audio = new Audio("assets/static.mp3");
-  audio.volume = 0.1;
+  audio.volume = 0.01;
 
   redactedElement.addEventListener("mouseover", () => {
     audio.play();
@@ -213,18 +213,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-	document.addEventListener("DOMContentLoaded", () => {
-  const danceElement = document.querySelector(".description h");
-  const imageElement = document.querySelector(".dogimg img");
+document.addEventListener("DOMContentLoaded", () => {
+  const danceElement = document.querySelector(".description h"); // Select the "dance" element
+  const imageElement = document.querySelector(".dogimg img"); // Select the dog image
 
   danceElement.addEventListener("mouseover", () => {
-    imageElement.src = "assets/img/cat.jpg";
+    imageElement.src = "assets/img/cat.jpg"; // Switch to cat.jpg on hover
   });
 
   danceElement.addEventListener("mouseout", () => {
-    imageElement.src = "assets/img/normaldog.jpg";
+    imageElement.src = "assets/img/normaldog.jpg"; // Revert back to normaldog.jpg
   });
 });
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const coldElement = document.querySelector(".description b");
   const imageElement = document.querySelector(".dogimg img");
